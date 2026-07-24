@@ -1,0 +1,17 @@
+{
+  "name": "wifi-audio-stream",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stream audio from a laptop to an Android device over the same Wi-Fi network using WebRTC.",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/database": "^1.0.0",
+    "@netlify/functions": "^3.0.0",
+    "drizzle-orm": "beta"
+  },
+  "devDependencies": {
+    "drizzle-kit": "beta"
+  }
+}

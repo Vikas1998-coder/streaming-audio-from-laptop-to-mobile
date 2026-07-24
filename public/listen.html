@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listen — WiFi Audio Stream</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <a class="back-link" href="/index.html">&larr; Back</a>
+
+    <div class="panel">
+      <h1>Listen</h1>
+      <p class="subtitle">Enter the 6-digit room code shown on the laptop.</p>
+
+      <div class="error-box" id="error-box"></div>
+
+      <div id="setup-view">
+        <div class="field">
+          <label for="code-input">Room code</label>
+          <input type="text" id="code-input" inputmode="numeric" maxlength="6" placeholder="000000" autocomplete="off" />
+        </div>
+        <button class="btn btn--primary" id="join-btn">Join room</button>
+        <p class="hint" style="margin-top:16px;">
+          Tip: tap anywhere on this page once after joining if audio doesn't start —
+          mobile browsers require a tap before playing audio.
+        </p>
+      </div>
+
+      <div id="live-view" style="display:none;">
+        <div class="status-row">
+          <span class="status-dot" id="status-dot"></span>
+          <span id="status-text">Connecting to the laptop&hellip;</span>
+        </div>
+        <div class="visualizer" id="visualizer"></div>
+        <audio id="audio-el" autoplay playsinline></audio>
+        <button class="btn btn--danger" id="leave-btn">Leave room</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="/listen.js"></script>
+</body>
+</html>

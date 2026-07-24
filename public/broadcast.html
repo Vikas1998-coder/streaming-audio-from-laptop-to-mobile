@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Broadcast — WiFi Audio Stream</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <a class="back-link" href="/index.html">&larr; Back</a>
+
+    <div class="panel">
+      <h1>Broadcast audio</h1>
+      <p class="subtitle">Choose a source, then share the room code with your Android device.</p>
+
+      <div class="error-box" id="error-box"></div>
+
+      <div id="setup-view">
+        <div class="field">
+          <label for="source">Audio source</label>
+          <select id="source">
+            <option value="mic">Microphone</option>
+            <option value="tab">Browser tab or system audio</option>
+          </select>
+        </div>
+        <button class="btn btn--primary" id="start-btn">Start broadcasting</button>
+        <p class="hint" style="margin-top:16px;">
+          "Browser tab or system audio" opens a screen-share picker — choose a tab and
+          make sure "Share tab audio" (or "Share system audio") is checked. Works best in Chrome/Edge.
+        </p>
+      </div>
+
+      <div id="live-view" style="display:none;">
+        <div class="room-code" id="room-code">------</div>
+        <div class="status-row">
+          <span class="status-dot" id="status-dot"></span>
+          <span id="status-text">Waiting for the phone to connect&hellip;</span>
+        </div>
+        <div class="visualizer" id="visualizer"></div>
+        <button class="btn btn--danger" id="stop-btn">Stop broadcasting</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="/broadcast.js"></script>
+</body>
+</html>
