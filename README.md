@@ -1,4 +1,4 @@
-# WiFi Audio Stream https://audiofromlaptoptomobile.netlify.app/
+# WiFi Audio Stream from laptop to android https://audiofromlaptoptomobile.netlify.app/
 
 Stream audio from a laptop's browser to an Android phone's browser over a shared
 Wi-Fi network — no app install, no cloud audio relay.
